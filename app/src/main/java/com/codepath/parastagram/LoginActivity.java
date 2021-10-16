@@ -20,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etusername ;
     private EditText etpassword ;
     private Button   btnlogin ;
+    private Button btnsignup ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,8 @@ public class LoginActivity extends AppCompatActivity {
         etusername = findViewById(R.id.etusername);
         etpassword = findViewById(R.id.etpassword);
         btnlogin = findViewById(R.id.btnlogin);
+        btnsignup = findViewById(R.id.btnsign);
+
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,8 +46,23 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        btnsignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoSignup();
 
 
+            }
+        });
+
+
+
+    }
+
+    private void gotoSignup() {
+        Intent i = new Intent(this,SignupActivity.class);
+        startActivity(i);
+        finish();
     }
 
     private void loginUser(String username, String password) {
@@ -58,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
                     return ; 
                 }
                 goMainActivity() ;
-                Toast.makeText(LoginActivity.this,"Sucess!", Toast.LENGTH_SHORT);
+                Toast.makeText(LoginActivity.this,"Sucess!", Toast.LENGTH_SHORT).show();
 
                 
             }

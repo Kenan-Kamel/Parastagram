@@ -35,7 +35,7 @@
 
     <Button
         android:id="@+id/btnlogin"
-        android:layout_width="136dp"
+        android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:text="Login"
@@ -43,6 +43,14 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etpassword" />
+
+    <Button
+        android:id="@+id/btnsign"
+        android:layout_width="136dp"
+        android:layout_height="37dp"
+        android:background="@color/black"
+        android:text="@string/singup"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
 
 </LinearLayout>
